@@ -1,0 +1,37 @@
+{% extends 'combinations/base.html' %}
+
+{% block content %}
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Resultados</h1>
+        <h3>Cartas seleccionadas: </h3>
+        <p>{{ selected_cards }}</p>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Cálculo secuencial</h5>
+                        <p class="card-text">Combinaciones: {{ seq_combinations }}</p>
+                        <p class="card-text">Tiempo: {{ seq_time }} segundos</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Cálculo en paralelo</h5>
+                        <p class="card-text">Combinaciones: {{ par_combinations }}</p>
+                        <p class="card-text">Tiempo: {{ par_time }} segundos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="mt-4">Combinaciones posibles:</h3>
+        <ul>
+            {% for combination in possible_combinations %}
+            <li>{{ combination }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

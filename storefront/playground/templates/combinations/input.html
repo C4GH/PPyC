@@ -1,0 +1,27 @@
+{% extends 'combinations/base.html' %}
+
+{% block content %}
+<div class="container">
+    <h1 class="text-center text-uppercase">Proyecto Final</h1>
+    <p class="lead text-justify">
+        El programa consiste en calcular todas las posibles combinaciones de cartas en una mano de poker.
+        El problema radica en diseñar un programa que genera todas las combinaciones de cartas.
+        Primero, se determina la cantidad de cartas que se van a utilizar, supongamos 10.
+        Entonces el programa va a generar una selección aleatoria de cartas. (2-10, A, J, Q, K; Corazón, Pica, Trébol y Diamante)
+        Después, se le pide al usuario que seleccione la cantidad de cartas que va a combinar de la selección previamente hecha.
+        El programa va a calcular la cantidad de combinaciones posibles y posteriormente va a escribir todas las combinaciones posibles.
+    </p>
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="totalCards">Número total de cartas a seleccionar:</label>
+            <input type="number" class="form-control" id="totalCards" name="total_cards">
+        </div>
+        <div class="form-group">
+            <label for="combinatoria">Número de cartas a combinar:</label>
+            <input type="number" class="form-control" id="combinatoria" name="combinatoria">
+        </div>
+        <button type="submit" class="btn btn-primary">Calcular Combinaciones</button>
+    </form>
+</div>
+{% endblock %}
