@@ -2,7 +2,7 @@
 Proyecto final de la materia de programación paralela y concurrente MAC 2023
 
 ## Descrión del programa 
-l programa consiste en calcular todas las posibles combinaciones de cartas en una mano de poker. 
+El programa consiste en calcular todas las posibles combinaciones de cartas en una mano de poker. 
 
 El problema radica en diseñar un programa que genera todas las combinaciones de cartas. 
 
